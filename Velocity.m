@@ -6,16 +6,14 @@ t3=18.877;
 max_velocity=111.111;
 accel = 5.886;
 
-    if (time <= t1)
-        velocity = accel.*time;
-    elseif (time > t1 && time < (t1+t2))
+    if (time >= 0 && time <= t1)
+        velocity = accel*time;
+    elseif (time >= t1 && time <= (t1+t2))
         velocity = max_velocity;
-        velocity =2;
-    elseif (time > (t1+t2) && time <= (t1+t2+t3))
-        velocity = -accel*(time-(t1+t2))+max_velocity;
-        velocity=3;
+    elseif (time >= (t1+t2) && time <= (t1+t2+t3))
+        velocity = -accel.*(time-(t1+t2)) + max_velocity;
     else
         velocity = 0;
-    end
+    end  
 end
 

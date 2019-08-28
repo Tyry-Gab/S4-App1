@@ -11,17 +11,23 @@ distance = 10000;
 
 
 figure('Name','Exercice 1','NumberTitle','off')
-subplot(2,1,1)
+% Acceleration
+subplot(3,1,1)
 fplot('Acceleration',[0 150])
 xlabel('Time (s)')
 ylabel('Acceleration (m/s^2)')
-subplot(2,1,2)
-title('Acceleration over time')
+% Velocity
+subplot(3,1,2)
 fplot('Velocity',[0 150])
 xlabel('Time (s)')
 ylabel('Velocity (m/s)')
 title('Velocity over time')
-
+% Position
+subplot(3,1,3)
+title('Position over time')
+fplot('Position',[0 150])
+xlabel('Time (s)')
+ylabel('Position (m)')
 
 
 %% Ex 2: 
